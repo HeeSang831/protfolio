@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+body{font-family: 'WorkSans'; font-size: 16px; font-weight: 400; line-height: 1; color: #000;}
+body.no-scrolling{overflow: hidden;}
+.noah{font-family: 'noah' !important;}
+
+/* layout */
+#wrap{min-width: 320px; position: relative;}
+#header{width: 100%; height: 100px; position: fixed; left: 0; right: 0; top: 0; z-index: 100; background-color: transparent;}
+#footer{width: 100%;}
+.cont{width: 100%; position: relative;}
+.cont .inner{max-width: 1680px; width: 100%; height: 100%; margin: 0 auto; padding: 150px 50px; position: relative;}
+.cont .inner .tit{position: absolute; left: 50px; top: 50px; z-index: 10;}
+#header .inner{width: 100%; height: 100%; padding: 0 20px; display: flex; justify-content: flex-end; align-items: center; position: relative;}
+#header .logo{width: 55px; position: absolute; left: 20px; top: 50%; z-index: 100; transform: translateY(-50%);}
+#header .gnb{display: flex; justify-content: space-between; align-items: center;}
+#header .gnb li{display: block; margin: 0 0 0 15px;}
+#header .gnb li a{display: block; font-size: 18px; font-weight: 700; color: #888; transition: all 0.3s ease;}
+#header .gnb li:hover a{
+    animation-name: wobble;
+    animation-duration: 0.7s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    color: #dcdcdc;
+}
+#header .gnb li.active a{
+    animation-name: wobble;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    color: #dcdcdc;
+}
+
+.topBtn{display: block; width: 20px; height: 20px; background-color: #000; position: fixed; bottom: 30px; right: 20px; z-index: 100;}
+.topBtn a{display: block; width: 100%; height: 100%;}
+
+.ui_inview {opacity:0; -webkit-transform:translateY(100px); transform:translateY(100px); -webkit-transition:all 1.2s ease-in-out; transition:all 1.2s ease-in-out;}
+.ui_inview.in {opacity:1; -webkit-transform:translateY(0); transform:translateY(0);}
